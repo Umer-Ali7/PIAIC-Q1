@@ -37,7 +37,7 @@ PIAIC_Q1/
 │   ├── assignment-02/
 │   └── ...
 │
-├── 🛠️ projects/   # (optional, agar quarter me projects banaye ho)
+├── 🛠️ projects/
 │
 └── README.md
 ```
