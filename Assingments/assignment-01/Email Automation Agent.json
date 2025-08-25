@@ -1,0 +1,174 @@
+{
+  "name": "Email Automation Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "ac672cfb-2143-4266-8d6f-609f1cae43ac",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Get row(s) in sheet').item.json.Emails }}",
+        "subject": " Welcome to the Agentic AI & Robotics Course!",
+        "emailType": "text",
+        "message": "={{ $json.output }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        768,
+        0
+      ],
+      "id": "7ac703bd-7f45-4c5d-9ec4-d96211925e59",
+      "name": "Send a message",
+      "webhookId": "1943f430-74af-4811-8934-b5c360ef661e",
+      "notesInFlow": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "OwClblV3VU365yae",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "Enter Google Sheet URL",
+          "mode": "url"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": ""
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        224,
+        0
+      ],
+      "id": "4bd79d2d-6972-4e32-9faf-4b39104cbd69",
+      "name": "Get row(s) in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "H5E0VO4GG1vKi9JC",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Write a short, professional but friendly welcome email message.  \nKeep it simple and clear without adding any company name or subject line.  \nDetails:  \n- Name: {{$json[\"Names\"]}}  \n- Message: \"You have been successfully added to the Agentic AI & Robotics course 🎉\"  \n- First class date: Saturday, 23rd August 2025  \n- Google Meet Link: https://meet.google.com/xyz-1234  \n- End with this motivational line: \"The future belongs to those who learn and build with AI 🚀\"  \n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        432,
+        0
+      ],
+      "id": "66e40ed0-7f37-40d2-be39-a279071ffd51",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        304,
+        208
+      ],
+      "id": "bc629268-164c-46fb-b5ca-87aba9db10d8",
+      "name": "Google Gemini Chat Model",
+      "credentials": {
+        "googlePalmApi": {
+          "id": "G03vbKsT7bzCy5AN",
+          "name": "Google Gemini(PaLM) Api account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "2157a0e1-2af5-4662-9e45-cd47f4ac1855",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5a8eeb85d50a25ced348ed7d4dba08989ff1da79134ba474d8fea4086f7e3b3a"
+  },
+  "id": "3y2teB178NQQ1bnT",
+  "tags": []
+}

@@ -1,0 +1,108 @@
+{
+  "name": "PIAIC-class01",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "seconds"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        160,
+        112
+      ],
+      "id": "2dde569f-ecc6-43d9-ac79-73f937ea1df4",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.Email }}",
+        "subject": " Welcome to the Agentic AI & Robotics Course!",
+        "emailType": "text",
+        "message": "=Hello {{ $json.Name }} Your a part of our Agentic AI &Robotic Course Programe.",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        928,
+        112
+      ],
+      "id": "ceb0738a-49ae-47d4-867f-9ad55b80c8f2",
+      "name": "Send a message",
+      "webhookId": "1943f430-74af-4811-8934-b5c360ef661e",
+      "notesInFlow": false,
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "OwClblV3VU365yae",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "{\n  \"Name\": \"Umer Ali\",\n  \"Email\": \"umerali54544@gmail.com\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        544,
+        112
+      ],
+      "id": "f142271d-99a0-4e2d-b8c2-4765c86a530f",
+      "name": "Edit Fields"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "d6c00b90-de0a-431a-9072-2f307d6eccbf",
+  "meta": {
+    "instanceId": "5a8eeb85d50a25ced348ed7d4dba08989ff1da79134ba474d8fea4086f7e3b3a"
+  },
+  "id": "PXGap56MW2Mv8nMQ",
+  "tags": [
+    {
+      "name": "Onsite class",
+      "id": "nyORsr4sUu5F6waE",
+      "createdAt": "2025-08-25T09:45:52.769Z",
+      "updatedAt": "2025-08-25T09:45:52.769Z"
+    }
+  ]
+}

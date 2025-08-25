@@ -36,4 +36,38 @@
 
 ---
 
-✨ *This homework ensures that all students are fully prepared for upcoming classes and connected with the learning community.*  
+# ⚡ n8n Assignment – Email Automation Agent  
+
+Along with the manual tasks, this assignment also included building an **automation workflow** in n8n.  
+
+### 📌 Workflow Overview  
+
+1. **Schedule Trigger** ⏰  
+   - Starts the workflow automatically on a defined interval.  
+
+2. **Google Sheets Node** 📑  
+   - Reads student names and emails from a connected Google Sheet.  
+
+3. **Google Gemini (AI Model)** 🤖  
+   - Generates a personalized welcome message for each student.  
+
+4. **AI Agent Node** 🧠  
+   - Uses the Gemini model’s response to prepare a structured email.  
+
+5. **Gmail Node** 📧  
+   - Sends the final email to each student with details about the course, class date, and motivational line.  
+
+---
+
+### 📂 Repository Structure  
+
+- **Onsite Classes** → Class-wise Python code & assignments.  
+- **n8n Workflows** → JSON files of workflows.  
+
+👉 [View All Class Assignments Code Here](../onsite-classes)  
+👉 [View All n8n Workflows Here](../workflows)  
+
+---
+
+## ✨ Example Email Generated  
+
