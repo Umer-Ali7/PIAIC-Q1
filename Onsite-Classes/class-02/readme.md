@@ -90,6 +90,6 @@ print(num1 != num2 or num1 > num2)   # True
 - Assignment solutions uploaded to GitHub.
 
 👉 Full class code & assignments are available here:
-Completed Assignment Code: 👉 [View All Class Assignments Code Here](Assingments) 
+Completed Assignment Code: 👉 [View All Class Assignments Code Here](https://github.com/Umer-Ali7/PIAIC-Q1/tree/main/Assingments) 
 
 **✨ Learning Python basics is the first step towards mastering AI. Keep practicing and experimenting! 🚀**
