@@ -1,8 +1,8 @@
-# 🎓 PIAIC - Modern AI with Python (Quarter 1)
+# 🎓 PIAIC - Modern AI Python (Quarter 1)
 
 ## 📖 About the Course
 **Institute:** PIAIC (Presidential Initiative for Artificial Intelligence & Computing)  
-**Quarter:** 1 (Modern AI with Python)  
+**Quarter:** 1 (Modern AI Python)  
 **Duration:** 3 Months  
 
 ### 🔑 Focus Areas

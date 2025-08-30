@@ -2,7 +2,7 @@
 
 **Date:** August 24, 2025  
 **Instructors:** Sir Aneeq & Sir Hamza  
-**Course:** Modern AI with Python (Quarter 1)  
+**Course:** Modern AI with Python (Quarter 1)
 
 ---
 
