@@ -1,0 +1,171 @@
+{
+  "name": "PIAIC-class-03",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b79995bd-87d1-4700-a825-11b9bd7801fc",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7a9b6880-c709-4ea3-ad6b-2ee673ff91d6",
+              "name": " name",
+              "value": "Umer Ali",
+              "type": "string"
+            },
+            {
+              "id": "3185955f-f0e3-49bf-a604-4d96d2beca1b",
+              "name": "email",
+              "value": "umerali54544@gmail.com",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "eaf99b46-2cb1-4623-8070-bac46fc2677b",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "operation": "create",
+        "base": {
+          "__rl": true,
+          "value": "apptixSo4fP8P0xdd",
+          "mode": "list",
+          "cachedResultName": "n8n",
+          "cachedResultUrl": "https://airtable.com/apptixSo4fP8P0xdd"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tbl33dQcuneipaTE3",
+          "mode": "list",
+          "cachedResultName": "Table 1",
+          "cachedResultUrl": "https://airtable.com/apptixSo4fP8P0xdd/tbl33dQcuneipaTE3"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Name": "={{ $json[' name'] }}",
+            "Email": "={{ $json.email }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.1,
+      "position": [
+        416,
+        0
+      ],
+      "id": "ba2ae5c2-857f-447e-9560-ce245f7a7379",
+      "name": "Create a record",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "VMBsEMDXTG88Bdbs",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## PIAIC Class 03\n**Airtable Integration** How to record Name and Email on Airtable table.",
+        "height": 320,
+        "width": 784
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -112,
+        -144
+      ],
+      "typeVersion": 1,
+      "id": "ccb4cc44-2764-4ecb-8b5f-a0e69e8e4a16",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Create a record",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "8d255dc3-08a5-4cd5-b981-105a151e76dc",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5a8eeb85d50a25ced348ed7d4dba08989ff1da79134ba474d8fea4086f7e3b3a"
+  },
+  "id": "6KOXPZbi3WUWAYtm",
+  "tags": [
+    {
+      "createdAt": "2025-08-25T09:45:52.769Z",
+      "updatedAt": "2025-08-25T09:45:52.769Z",
+      "id": "nyORsr4sUu5F6waE",
+      "name": "Onsite class"
+    }
+  ]
+}
