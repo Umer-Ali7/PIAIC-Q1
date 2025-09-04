@@ -52,4 +52,4 @@ If you’re also learning **Python/AI**, let’s connect and grow together 💡
 - 💼 **LinkedIn:** [Umer Ali](https://www.linkedin.com/in/umer-ali-a962252ba/)  
 
 ---
-✨ _“Consistency is the key to becoming a great AI Engineer._  
+✨ _Consistency is the key to becoming a great AI Engineer._  
