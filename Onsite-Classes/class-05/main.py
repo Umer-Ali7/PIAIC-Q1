@@ -1,13 +1,15 @@
-# List Methods in Python
+# List Methods and Functions in Python
 
 vegitsbles = ["Hari Mirch", "lal mirch", "Alo", "Begun", "Moli"]
 
-# print(len(vegitsbles))
-# print(vegitsbles(-1))
+print(len(vegitsbles))
+print(vegitsbles(-1))
 
 vegitsbles.remove("Begun")
 vegitsbles.pop(1)
 vegitsbles.insert(2, "Dhanya")
+
+print(vegitsbles[1:3])
 
 print(vegitsbles)
 
