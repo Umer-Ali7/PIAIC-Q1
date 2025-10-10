@@ -18,3 +18,4 @@
 
 ### 🔹 Six-Part Prompting Framework  
 - Step-by-step structure for professional prompt design.  
+- Covers **clarity, role, task, format, constraints, and examples**.  
