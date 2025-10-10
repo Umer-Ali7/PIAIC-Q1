@@ -8,4 +8,5 @@
 
 ## 🎯 Topics Covered  
 
-### 🔹 Prompt Engineering Basics  
+### 🔹 Prompt Engineering Basics
+- Understanding what prompts are and how they guide AI models.  
