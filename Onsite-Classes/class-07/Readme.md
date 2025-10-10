@@ -9,4 +9,5 @@
 ## 🎯 Topics Covered  
 
 ### 🔹 Prompt Engineering Basics
-- Understanding what prompts are and how they guide AI models.  
+- Understanding what prompts are and how they guide AI models.
+- Writing effective prompts for better AI outputs.  
