@@ -17,3 +17,4 @@
 - How role/system messages shape responses.  
 
 ### 🔹 Six-Part Prompting Framework  
+- Step-by-step structure for professional prompt design.  
