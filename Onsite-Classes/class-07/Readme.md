@@ -12,4 +12,5 @@
 - Understanding what prompts are and how they guide AI models.
 - Writing effective prompts for better AI outputs.
 
-### 🔹 Context Engineering  
+### 🔹 Context Engineering
+- Adding **context** to prompts for accuracy.  
