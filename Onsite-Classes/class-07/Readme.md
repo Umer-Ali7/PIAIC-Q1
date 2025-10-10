@@ -25,3 +25,5 @@
 - Hands-on with **Neno Banana (image gen)** prompts.
 
 ---
+
+## 📝 Key Highlights  
