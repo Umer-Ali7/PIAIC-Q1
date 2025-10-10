@@ -21,3 +21,4 @@
 - Covers **clarity, role, task, format, constraints, and examples**.  
 
 ### 🔹 Image Generation  
+- Intro to **text-to-image models**.  
