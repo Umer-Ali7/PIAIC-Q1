@@ -15,3 +15,5 @@
 ### 🔹 Context Engineering
 - Adding **context** to prompts for accuracy.
 - How role/system messages shape responses.  
+
+### 🔹 Six-Part Prompting Framework  
