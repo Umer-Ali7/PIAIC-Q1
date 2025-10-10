@@ -13,4 +13,5 @@
 - Writing effective prompts for better AI outputs.
 
 ### 🔹 Context Engineering
-- Adding **context** to prompts for accuracy.  
+- Adding **context** to prompts for accuracy.
+- How role/system messages shape responses.  
