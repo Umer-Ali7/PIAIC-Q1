@@ -22,4 +22,4 @@
 
 ### 🔹 Image Generation  
 - Intro to **text-to-image models**.
-- Hands-on with **Neno Banana (image gen)** prompts.  
+- Hands-on with **Neno Banana (image gen)** prompts.
