@@ -21,4 +21,5 @@
 - Covers **clarity, role, task, format, constraints, and examples**.  
 
 ### 🔹 Image Generation  
-- Intro to **text-to-image models**.  
+- Intro to **text-to-image models**.
+- Hands-on with **Neno Banana (image gen)** prompts.  
