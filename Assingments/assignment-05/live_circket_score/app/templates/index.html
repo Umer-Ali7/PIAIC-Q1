@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Cricket Scores</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Live Cricket Scores</h1>
+      <p class="subtitle">Source: ESPNcricinfo live scores RSS</p>
+    </header>
+
+    {% if error %}
+      <div class="alert">Failed to load scores: {{ error }}</div>
+    {% endif %}
+
+    {% if scores %}
+      <ul class="scores">
+        {% for s in scores %}
+          <li>
+            <a href="{{ s.link }}" target="_blank" rel="noopener">
+              {{ s.title }}
+            </a>
+            {% if s.pub_date %}
+              <span class="date">{{ s.pub_date }}</span>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="empty">No live matches at the moment.</p>
+    {% endif %}
+
+    <footer>
+      <form method="get" action="/">
+        <button type="submit">Refresh</button>
+      </form>
+    </footer>
+  </body>
+</html>

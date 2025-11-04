@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Number Guessing Game</h1>
+      <p class="subtitle">Login to play. Choose difficulty and beat your best score!</p>
+
+      <section class="card" id="auth-card">
+        <h2>Login / Register</h2>
+        <form id="auth-form" autocomplete="off">
+          <div class="row">
+            <input id="email" name="email" type="email" placeholder="Email" required />
+            <input id="password" name="password" type="password" placeholder="Password" required />
+            <button type="submit" id="login-btn">Login</button>
+            <button type="button" id="register-btn">Register</button>
+          </div>
+          <div id="auth-message" class="message"></div>
+        </form>
+      </section>
+
+      <section class="card" id="game-card" hidden>
+        <div class="top-row">
+          <div>
+            <label class="label">Difficulty</label>
+            <select id="difficulty">
+              <option value="easy">Easy (1-50, 10 attempts)</option>
+              <option value="medium">Medium (1-100, 7 attempts)</option>
+              <option value="hard">Hard (1-500, 8 attempts)</option>
+            </select>
+          </div>
+          <div class="toggle">
+            <label class="label" for="hints">Hints</label>
+            <input type="checkbox" id="hints" />
+          </div>
+          <div class="user">
+            <span id="whoami"></span>
+            <button id="logout" class="link-btn">Logout</button>
+          </div>
+        </div>
+
+        <form id="guess-form" autocomplete="off">
+          <label for="guess" class="label">Enter your guess</label>
+          <div class="row">
+            <input id="guess" name="guess" type="number" min="1" max="100" placeholder="Enter number" required />
+            <button type="submit" id="submit-btn">Guess</button>
+          </div>
+        </form>
+
+        <div id="message" class="message" aria-live="polite">Make your first guess!</div>
+
+        <div class="meta">
+          <span id="attempts-left">Attempts left: -</span>
+          <span id="range">Range: -</span>
+          <button id="play-again" class="link-btn" hidden>Play again</button>
+        </div>
+
+        <div class="progress">
+          <div class="bar" id="progress-bar" style="width:0%"></div>
+        </div>
+      </section>
+
+      <section class="card" id="stats-card" hidden>
+        <h2>Your Stats</h2>
+        <div class="stats-row">
+          <div>Games: <span id="games">0</span></div>
+          <div>Wins: <span id="wins">0</span></div>
+          <div>Best Attempts: <span id="best">-</span></div>
+          <div>Streak: <span id="streak">0</span> (max <span id="max-streak">0</span>)</div>
+        </div>
+        <div>
+          <strong>Achievements</strong>
+          <ul id="achievements"></ul>
+        </div>
+      </section>
+
+      <footer>
+        <small>Tip: Use hints wisely. Try beating Hard mode!</small>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>

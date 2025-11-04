@@ -1,0 +1,77 @@
+:root {
+  --bg: #0f172a;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #22c55e;
+  --warn: #f59e0b;
+  --primary: #2563eb;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #0b1020);
+  color: var(--text);
+  display: grid;
+  place-items: center;
+}
+
+.container { width: min(880px, 94vw); }
+h1 { margin: 24px 0 8px; font-size: 2rem; }
+.subtitle { margin: 0 0 16px; color: var(--muted); }
+
+.card {
+  background: var(--card);
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  margin-top: 16px;
+}
+
+.label { display: block; margin-bottom: 8px; color: var(--muted); }
+.row { display: flex; gap: 10px; }
+.top-row { display: flex; gap: 16px; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.toggle { display: flex; align-items: center; gap: 8px; }
+.user { display: flex; align-items: center; gap: 10px; }
+
+input[type="number"], input[type="email"], input[type="password"], select {
+  flex: 1;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #374151;
+  background: #0b1222;
+  color: var(--text);
+}
+input[type="number"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus { outline: 2px solid #2563eb33; }
+
+button {
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+button:hover { filter: brightness(1.1); }
+
+.message { margin-top: 16px; min-height: 24px; }
+.meta { display: flex; align-items: center; gap: 12px; margin-top: 12px; color: var(--muted); }
+.link-btn {
+  background: transparent;
+  border: 1px solid #374151;
+  color: var(--text);
+}
+
+.win { color: var(--accent); }
+.low, .high { color: #60a5fa; }
+.warn { color: var(--warn); }
+
+.progress { margin-top: 12px; height: 8px; background: #0b1222; border: 1px solid #374151; border-radius: 6px; overflow: hidden; }
+.progress .bar { height: 100%; background: var(--primary); width: 0%; transition: width 0.2s ease; }
+
+footer { margin-top: 18px; color: var(--muted); }
+
