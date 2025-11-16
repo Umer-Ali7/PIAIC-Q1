@@ -1,0 +1,46 @@
+{
+  "accounts": {
+    "1001": {
+      "number": "1001",
+      "owner": "Alice",
+      "pin": "1234",
+      "balance": 1000.0,
+      "transactions": [
+        {
+          "timestamp": "2024-01-01T00:00:00Z",
+          "type": "deposit",
+          "amount": 1000.0,
+          "note": "Initial seed"
+        }
+      ]
+    },
+    "2002": {
+      "number": "2002",
+      "owner": "Bob",
+      "pin": "4321",
+      "balance": 500.0,
+      "transactions": [
+        {
+          "timestamp": "2024-01-02T00:00:00Z",
+          "type": "deposit",
+          "amount": 500.0,
+          "note": "Initial seed"
+        }
+      ]
+    },
+    "2020": {
+      "number": "2020",
+      "owner": "Umer Ali",
+      "pin": "12121212",
+      "balance": 1212.0,
+      "transactions": [
+        {
+          "timestamp": "2025-11-09T12:02:52.889054",
+          "type": "deposit",
+          "amount": 1212.0,
+          "note": "Initial deposit"
+        }
+      ]
+    }
+  }
+}
